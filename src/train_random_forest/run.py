@@ -117,7 +117,7 @@ def go(args):
         name=args.output_artifact,
         type="model_export",
         description="NYC short-term rental price rf model",
-        metadata = rf_config
+        metadata=rf_config
     )
     artifact.add_dir(local_path="random_forest_dir")
     run.log_artifact(artifact)
@@ -237,7 +237,7 @@ def get_inference_pipeline(rf_config, max_tfidf_features):
     sk_pipe = Pipeline(
         steps=[
             ("preprocessor", preprocessor),
-            ("random_Forest", random_Forest)
+            ("random_forest", random_Forest)
         ]
     )
 
