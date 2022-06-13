@@ -97,7 +97,7 @@ def go(args):
 
     ######################################
     # Save the sk_pipe pipeline as a mlflow.sklearn model in the directory "random_forest_dir"
-    # HINT: use mlflow.sklearn.save_model
+    # Use mlflow.sklearn.save_model
     logger.info("Save the model")
     mlflow.sklearn.save_model(
         sk_model=sk_pipe,
@@ -109,7 +109,7 @@ def go(args):
 
     ######################################
     # Upload the model we just exported to W&B
-    # HINT: use wandb.Artifact to create an artifact. Use args.output_artifact as artifact name, "model_export" as
+    # Use wandb.Artifact to create an artifact. Use args.output_artifact as artifact name, "model_export" as
     # type, provide a description and add rf_config as metadata. Then, use the .add_dir method of the artifact instance
     # you just created to add the "random_forest_dir" directory to the artifact, and finally use
     # run.log_artifact to log the artifact to the run
